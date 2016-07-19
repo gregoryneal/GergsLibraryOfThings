@@ -40,11 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="gerg\things\lists\GLinkedList.cs" />
+    <Compile Include="gerg\things\lists\GNode.cs" />
+    <Compile Include="gerg\things\networks\ports\PortScanner.cs" />
     <Compile Include="gerg\things\text\operations\StringReverser.cs" />
     <Compile Include="gerg\things\text\operations\WhitespaceStripper.cs" />
     <Compile Include="gerg\things\text\properties\PalindromeChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="gerg\things\numbers\integers\" />
+    <Folder Include="gerg\things\numbers\math\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

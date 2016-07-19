@@ -51,6 +51,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="gerg\things\lists\GLinkedListTests.cs" />
+    <Compile Include="gerg\things\networks\ports\PortScannerTests.cs" />
     <Compile Include="gerg\things\text\operations\StringReverserTests.cs" />
     <Compile Include="gerg\things\text\operations\WhitespaceStripperTests.cs" />
     <Compile Include="gerg\things\text\properties\PalindromeCheckerTests.cs" />
