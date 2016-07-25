@@ -42,6 +42,11 @@
   <ItemGroup>
     <Compile Include="gerg\things\lists\GLinkedList.cs" />
     <Compile Include="gerg\things\lists\GNode.cs" />
+    <Compile Include="gerg\things\lists\ListHelpers.cs" />
+    <Compile Include="gerg\things\lists\markov\GMarkovChain.cs" />
+    <Compile Include="gerg\things\lists\markov\GMarkovLink.cs" />
+    <Compile Include="gerg\things\lists\markov\GMarkovNode.cs" />
+    <Compile Include="gerg\things\lists\markov\ProbabilityGreaterThanOneException.cs" />
     <Compile Include="gerg\things\networks\ports\PortScanner.cs" />
     <Compile Include="gerg\things\text\operations\StringReverser.cs" />
     <Compile Include="gerg\things\text\operations\WhitespaceStripper.cs" />
@@ -50,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="gerg\things\numbers\integers\" />
-    <Folder Include="gerg\things\numbers\math\" />
+    <Folder Include="gerg\things\numbers\math\vectors\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

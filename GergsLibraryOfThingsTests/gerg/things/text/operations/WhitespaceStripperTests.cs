@@ -9,40 +9,53 @@ using System.Threading.Tasks;
 namespace GergsLibraryOfThings.gerg.things.text.operations.Tests
 {
     [TestClass()]
-    public class WhitespaceStripperTests
+    public class TextStripperTests
     {
         [TestMethod()]
-        public void StripWhitespace_NoWhitespace_Test()
+        public void StripWhitespaceNoWhitespaceTest()
         {
             //Arrange
             string original = "gerg.233";
             string expected = "gerg.233";
             //Act
-            string result = WhitespaceStripper.StripWhitespace(original);
+            string result = TextStripper.StripWhitespace(original);
             //Assert
             Assert.AreEqual(expected, result);
         }
 
         [TestMethod()]
-        public void StripWhitespace_WhitespaceOnFrontAndBack_Test() {
+        public void StripWhitespaceWhitespaceOnFrontAndBackTest() {
             //Arrange
             string original = "  gerg.2ee33#$       ";
             string expected = "gerg.2ee33#$";
             //Act
-            string result = WhitespaceStripper.StripWhitespace(original);
+            string result = TextStripper.StripWhitespace(original);
             //Assert
             Assert.AreEqual(expected, result);
         }
 
         [TestMethod()]
-        public void StripWhitespace_AmpersandOnFrontAndBack_Test() {
+        public void StripWhitespaceAmpersandOnFrontAndBackTest() {
             //Arrange
             string original = "&&&&gergTESTSah0y$%($&&*&";
             string expected = "gergTESTSah0y$%($&&*";
             //Act
-            string result = WhitespaceStripper.StripWhitespace(original, '&');
+            string result = TextStripper.StripWhitespace(original, '&');
             //Assert
             Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod()]
+        public void StripPunctuationOnBothSidesTest() {
+            //Arrange
+            string original = ".!?Gergaroyskins?!.";
+            string expected = "Gergaroyskins";
+
+            //Act
+            string actual = TextStripper.StripAllPunctuation(original);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }

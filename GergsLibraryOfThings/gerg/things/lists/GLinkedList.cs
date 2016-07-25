@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-
-namespace GergsLibraryOfThings.gerg.things.lists
+﻿namespace GergsLibraryOfThings.gerg.things.lists
 {
     public class GLinkedList<T>
     {
@@ -48,6 +44,22 @@ namespace GergsLibraryOfThings.gerg.things.lists
 
                 return curr;
             }
+        }
+
+        public bool IsEmpty() {
+            return this.Head == null;
+        }
+
+        //Allow stack behaviour, also makes reversing the linked list code easier
+        public void Push(GNode<T> newHead) {
+            newHead.NextNode = this.Head;
+            this.Head = newHead;
+        }
+
+        public GNode<T> Pop() {
+            GNode<T> head = this.Head;
+            this.Head = this.Head.NextNode;
+            return head;
         }
     }
 }
